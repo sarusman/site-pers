@@ -1,1 +1,1 @@
-web : gunicorn Todo sitep.wsgi --log-file -
+web: gunicorn sitep.wsgi

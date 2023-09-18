@@ -1,0 +1,93 @@
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'test.css' %}">
+
+<nav id="navbar">
+  <a href="#">À propos</a>
+  <a href="#projet">Projet</a>
+  <a href="#formation">Formation</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <p>Chaque œuvre dans ce portfolio est le résultat d'un voyage,</p>
+  <p>d'un apprentissage et d'une évolution.</p><br>
+  <em><p style="font-size: 20px;">Satkunarajah Sarusman, passionné d'informatique.</p></em>
+
+
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+<div class="social-buttons">
+  <a target="_blank" href="https://fr.linkedin.com/in/sarusman-satkunarajah-a94184207" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+    <span class="social-button__inner">
+      <i class="fab fa-linkedin-in"></i>
+    </span>
+  </a>
+  <a target="_blank" href="https://github.com/sarusman" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+    <span class="social-button__inner">
+      <i class="fab fa-github"></i>
+    </span>
+  </a>
+</div>
+</header>
+
+
+<center><div class="image-left">
+  <img style="height: 50%;width: 50%; border-radius: 50%;" src="https://i.postimg.cc/Mpk0HqGt/IMG-5683.jpg" alt="Human Rights Logo"/>
+  <div>
+    <h2>Qui suis-je</h2>
+    <p>Je suis Sarusman, un passionné d'informatique et un explorateur dans l'âme. Mon temps est dédié à l'univers numérique, que ce soit en créant de nouveaux projets informatiques ou en parcourant le monde à la recherche d'aventures et de découvertes.</p>
+    <footer></footer>
+  </div>
+</div>
+</center>
+
+
+
+<hr>
+<section id="formation">
+  <h2>Mes formations/certifications</h2>
+  <div class="projects-container">
+
+  {% for i in formation%}
+  <a href="https://codepen.io/FlorinPop17/full/BaBePej" target="_blank"  class="project-tile">
+    <img src={{i.image}} alt="Password Generator">
+    <p style="font-size: 12px; color:grey;">{{i.datee}}</p>
+    <p style="font-size: 15px;">{{i.titre}}</p>
+  </a>
+  {%endfor%}
+
+  </div>
+</section>
+
+<hr>
+
+<section id="projet">
+  <h2>Mes projets</h2>
+  <div class="projects-container">
+
+  {%for i in projets%}
+  <a href="https://codepen.io/FlorinPop17/full/BaBePej" target="_blank"  class="project-tile">
+    <img src="{{i.image}}" alt="Password Generator">
+    <p style="font-size: 12px; color:grey;">{{i.datee}}</p>
+    <p style="font-size: 15px;">{{i.titre}}</p>
+  </a>
+  {%endfor%}
+  </div>
+
+</section>
+
+<section id="contact" class="bg-blue">
+ <div class="social-buttons">
+  <a target="_blank" href="https://fr.linkedin.com/in/sarusman-satkunarajah-a94184207" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+    <span class="social-button__inner">
+      <i class="fab fa-linkedin-in"></i>
+    </span>
+  </a>
+  <a target="_blank" href="https://github.com/sarusman" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+    <span class="social-button__inner">
+      <i class="fab fa-github"></i>
+    </span>
+  </a>
+</div>
+<p>Serveur Django - <a href="">Code source du site</a></p>
+</section>

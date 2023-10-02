@@ -49,7 +49,7 @@
   <div class="projects-container">
 
   {% for i in formation%}
-  <a href="https://codepen.io/FlorinPop17/full/BaBePej" target="_blank"  class="project-tile">
+  <a href="{{i.ids}}" target="_blank"  class="project-tile">
     <img src={{i.image}} alt="Password Generator">
     <p style="font-size: 12px; color:grey;">{{i.datee}}</p>
     <p style="font-size: 15px;">{{i.titre}}</p>
@@ -66,7 +66,7 @@
   <div class="projects-container">
 
   {%for i in projets%}
-  <a href="https://codepen.io/FlorinPop17/full/BaBePej" target="_blank"  class="project-tile">
+  <a href="{{i.ids}}" target="_blank"  class="project-tile">
     <img src="{{i.image}}" alt="Password Generator">
     <p style="font-size: 12px; color:grey;">{{i.datee}}</p>
     <p style="font-size: 15px;">{{i.titre}}</p>

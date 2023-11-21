@@ -1,4 +1,345 @@
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF8F0;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+nav {
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 30px;
+  text-decoration: none;
+  
+}
+
+nav a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+header {
+  height: 100vh;
+  background-image: url(https://i.postimg.cc/QMtQfvqY/Silent-brings-an-idea-to-become-a-great-power-1.png);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+}
+
+header::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align: center;
+}
+
+header p {
+  font-size: 30px;
+  margin: 0;
+  text-align: center;-tile
+}
+
+section {
+  text-align: center;
+  padding: 20px;
+}
+
+section h2 {
+  margin: 0;
+}
+
+section p {
+  margin-top: 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 810px;
+  margin: 20px auto 0;
+}
+
+.project-tile {
+  margin: 10px;
+  max-width: 240px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-tile img {
+  max-width: 50%;
+  border-radius: 50%;
+}
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B0E57C; /* Couleur verte pastel */
+    color: #FFFFFF; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+        }
+
+.download-button:hover {
+  background-color: #8FC34E; /* Couleur verte pastel plus foncée */
+}
+.project-tile p {
+  font-size: 20px;
+  margin-top: 10px; 
+  color: #000;
+}
+
+.bg-blue {
+  background-color: #7FD1B9;
+  color: #fff;
+}
+
+.social-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.social-ul a {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin: 5px 10px;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #DE6E4B;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .fa-heart {
+  color: red;
+}
+
+@media (max-width: 440px) {
+  section {
+    padding: 20px;
+  }
+}
+
+
+.social-buttons {
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+}
+.social-buttons__button {
+  margin: 5px;
+   margin-top: 50px;
+}
+.social-button {
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 70px;
+  height: 70px;
+  text-decoration: none;
+}
+.social-icons {
+  width: 100%;
+}
+.social-button__inner {
+  font-size: 2.3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+.social-button i,
+.social-button svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social-button i {
+  font-size: 28px;
+}
+.social-button svg {
+  height: 40%;
+  width: 40%;
+}
+.social-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.social-button:focus,
+.social-button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.social-button:focus::after,
+.social-button:hover::after {
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+}
+
+.social-button--facebook {
+  color: #3b5999;
+}
+.social-button--facebook::after {
+  background: #3b5999;
+}
+.social-button--linkedin {
+  color: #0077b5;
+}
+.social-button--linkedin::after {
+  background: #0077b5;
+}
+.social-button--github {
+  color: #6e5494;
+}
+.social-button--github::after {
+  background: #6e5494;
+}
+.social-button--codepen {
+  color: #212121;
+}
+.social-button--codepen::after {
+  background: #212121;
+}
+
+.social-button--instagram {
+  color: #e4405f;
+}
+.social-button--instagram::after {
+  background: #e4405f;
+}
+img
+{
+    max-width: 42em;
+  max-width: 100%;
+}
+
+.image-left, .image-right
+{
+  max-width: 42em;
+  font-family: Calibri, sans-serif;
+  margin: 1em 0;
+}
+
+@media (min-width: 20em)
+{
+  .image-left, .image-right
+  {
+    display: flex;
+    align-items: center;
+  }
+
+  .image-left img
+  {
+    margin-right: 1em;
+    float: left; /* fallback */
+  }
+
+  .image-right img
+  {
+    order: 1;
+    margin-left: 1em;
+    float: right; /* fallback */
+  }
+  
+  /* clearfix for fallback */
+  .image-left::after,
+  .image-right::after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 30em)
+{
+  .image-left img, .image-right img
+  {
+    flex-shrink: 0;
+  }
+}
+
+
+</style>
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'test.css' %}">
 
@@ -10,14 +351,14 @@
 </nav>
 
 <header>
-  <p>Chaque œuvre dans ce portfolio est le résultat d'un voyage,</p>
-  <p>d'un apprentissage et d'une évolution.</p><br>
-  <em><p style="font-size: 20px;">Satkunarajah Sarusman, passionné d'informatique.</p></em>
+  <p>Chaque projet dans ce portfolio est le fruit d'une exploration,</p>
+  <p>d'un processus d'apprentissage et d'une progression constante.</p><br>
+  <em><p style="font-size: 20px;">Satkunarajah Sarusman</p></em>
 
 
 <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 <div class="social-buttons">
-  <a target="_blank" href="https://fr.linkedin.com/in/sarusman-satkunarajah-a94184207" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+  <a target="_blank" href="https://fr.linkedin.com/in/satkunarajah" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
     <span class="social-button__inner">
       <i class="fab fa-linkedin-in"></i>
     </span>
@@ -32,7 +373,7 @@
 
 
 <center><div class="image-left">
-  <img style="height: 50%;width: 50%; border-radius: 50%;" src="https://i.postimg.cc/Mpk0HqGt/IMG-5683.jpg" alt="Human Rights Logo"/>
+  <img style="height: 50%;width: 50%; border-radius: 50%;" src="https://i.postimg.cc/MHxXFQSZ/home-serveur-mysite-server-v3-static-Phot.jpg" alt="Human Rights Logo"/>
   <div>
     <h2>Qui suis-je</h2>
     <p>Je suis Sarusman, un passionné d'informatique et un explorateur dans l'âme. Mon temps est dédié à l'univers numérique, que ce soit en créant de nouveaux projets informatiques ou en parcourant le monde à la recherche d'aventures et de découvertes.</p>
@@ -76,9 +417,26 @@
 
 </section>
 
+<hr>
+
+<section id="CV">
+  <h2>Curriculum Vitae</h2>
+  <div class="projects-container">
+<a href="https://drive.google.com/uc?export=download&id=1zn2hyTi3KWy5VmdgyRbxRCAO15cXjlc2"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="download-button">Télécharger le CV en format PDF</a>
+
+
+  </div>
+
+</section>
+
+
+
 <section id="contact" class="bg-blue">
  <div class="social-buttons">
-  <a target="_blank" href="https://fr.linkedin.com/in/sarusman-satkunarajah-a94184207" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+  <a target="_blank" href="https://fr.linkedin.com/in/satkunarajah" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
     <span class="social-button__inner">
       <i class="fab fa-linkedin-in"></i>
     </span>
@@ -89,5 +447,8 @@
     </span>
   </a>
 </div>
-<p>Serveur Django - <a href="">Code source du site</a></p>
+
+
+
+<p>Serveur Django hébergé sur Heroko - <a target="_blank" href="https://github.com/sarusman/site-pers/tree/main/sitep">Code source du site</a></p>
 </section>

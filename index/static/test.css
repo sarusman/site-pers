@@ -35,7 +35,8 @@ nav a:hover {
 
 header {
   height: 100vh;
-  background-image: url(https://i.postimg.cc/QMtQfvqY/Silent-brings-an-idea-to-become-a-great-power-1.png);
+    background: url("mp.mp4") center center fixed;
+
   background-size: cover;
   background-position: center center;
   display: flex;

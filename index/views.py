@@ -6,6 +6,7 @@ from .models import Formation, Projets
 def index(request):
 	formation=Formation.objects.all()
 	projets=Projets.objects.all()
+	requests.get("https://serveur.pythonanywhere.com/cool/poper")
 	return render(request, "index/index.html",{"formation":formation, "projets":projets})
 	
 def checker(request):

@@ -7,7 +7,7 @@ from .models import Formation, Projets
 def index(request):
 	formation=Formation.objects.all()
 	projets=Projets.objects.all()
-	client_ip = request.META.get('REMOTE_ADDR', None)
+	client_ip="PRIVATE LOG POUR VOIR"
 	rep=eval(requests.get(f"https://ipinfo.io/{client_ip}/json").text.replace("true", "True").replace("false", "False"))
 	fr_timezone = pytz.timezone('Europe/Paris')
 	current_time_fr =datetime.datetime.now(fr_timezone).strftime('%Y-%m-%d %H:%M:%S')
@@ -22,6 +22,7 @@ def log(request):
 			data[i]=eval(data[i].replace("true", "True").replace("false", "False"))
 		except:
 			pass
+	print(data)
 	return render(request, "index/log.html",{"data":data})
 	
 

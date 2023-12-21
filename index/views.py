@@ -8,7 +8,8 @@ def index(request):
 	formation=Formation.objects.all()
 	projets=Projets.objects.all()
 	client_ip="PRIVATE LOG POUR VOIR"
-	rep=eval(requests.get(f"https://ipinfo.io/{client_ip}/json").text.replace("true", "True").replace("false", "False"))
+	#rep=eval(requests.get(f"https://ipinfo.io/{client_ip}/json").text.replace("true", "True").replace("false", "False"))
+	rep={"ip":client_ip}
 	fr_timezone = pytz.timezone('Europe/Paris')
 	current_time_fr =datetime.datetime.now(fr_timezone).strftime('%Y-%m-%d %H:%M:%S')
 	rep["date"]=current_time_fr

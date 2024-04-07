@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +27,7 @@ SECRET_KEY = 'django-insecure-*0^f_$oe$y-i9xsaz#44@64!h_%1g2v&j&vib951)7$s&e4f63
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
@@ -114,18 +113,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'index/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "index/static",
-    '/var/www/static/',
-]
-STATIC_DIR = os.path.join(BASE_DIR, 'index/static')
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'index/static'),
-)
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-django_heroku.settings(locals())
